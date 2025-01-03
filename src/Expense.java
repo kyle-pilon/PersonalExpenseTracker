@@ -1,7 +1,7 @@
 public class Expense {
-    private String description;
-    private double amount;
-    private String category;
+    private final String description;
+    private final double amount;
+    private final String category;
     
     public Expense(String description, double amount, String category) {
         this.description = description;
