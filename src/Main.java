@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Expense> expenses = new ArrayList<>();
         try (Scanner scanner = new Scanner(System.in)) {
-            
+
             while (true) {
                 System.out.println("1. Add Expense");
                 System.out.println("2. View Expenses");
@@ -32,9 +32,13 @@ public class Main {
                         System.out.println("Expense added successfully!");
                     }
                     case 2 -> {
-                        System.out.println("Expenses:");
-                        for (Expense expense : expenses) {
-                            System.out.println(expense);
+                        if (expenses.isEmpty()) {
+                            System.out.println("No expenses recorded yet.");
+                        } else {
+                            System.out.println("\nYour Expenses:");
+                            for (Expense expense : expenses) {
+                                System.out.println(expense);
+                            }
                         }
                     }
                     case 3 -> {
